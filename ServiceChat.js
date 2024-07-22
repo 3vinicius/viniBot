@@ -1,32 +1,40 @@
 
 class ServiceChat{
 
+    listChats
+
+
     constructor() {
+        this.listChats = [];
     }
 
-    verifyIfChatOpen(listChats, newChat) {
+// Depois verificar se é minha propria menssagem captiruar apenas mensages que sejam de usuarios que não eu
+    verifyIfChatOpen(newChat) {
+        if(!this.verifyIfListChatIsValid()) {
+            this.listChats = []
+            this.listChats.push(newChat)
+        }
         let signal = 0;
-        for (let chat of listChats) {
+        for (let chat of this.listChats) {
             if (chat.phoneNumber === newChat.phoneNumber) {
                 signal++
                 break;
             }
         }
-        return signal > 0 && listChats.length > 0
+        if(!(signal > 0 && this.listChats.length > 0)) {
+            this.listChats.push(newChat)
+            return true
+        } else {
+            return false
+        }
     }
 
 
-    verifyIfListChatIsValid(listChats){
-        if(listChats.length === 0 ){
+    verifyIfListChatIsValid(){
+        if(this.listChats.length === 0 ){
             return false;
-        } else return new Date().getDate() <= listChats[0].dataTime.getDate();
+        } else return new Date().getDate() <= this.listChats[0].dataTime.getDate();
     }
-
-
-
-
-
-
 }
 
 module.exports = ServiceChat
