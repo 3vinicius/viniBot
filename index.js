@@ -51,7 +51,9 @@ client.on("message_create",async message => {
 
 
     try {
+
         const chatIsOpen = serviceChat.verifyIfChatOpen(newChat)
+
         if(newChat.type === "contact" && !chatIsOpen && !message._data.id.fromMe){
             console.log('É um contato')
             client.sendMessage(message.from, "Olá 👋🏽😃, eu sou o @viniBot, assistente do poderosíssimo e extraordinário Sr. Vinicius.\n" +
@@ -60,6 +62,10 @@ client.on("message_create",async message => {
         else {
             console.log("É um grupo grupo")
         }
+
+
+
+
     } catch (err){
         console.log(err)
     }

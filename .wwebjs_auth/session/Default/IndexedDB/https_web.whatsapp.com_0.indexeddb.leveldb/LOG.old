@@ -1,0 +1,4 @@
+2024/07/22-13:35:10.453 2ffc Reusing MANIFEST C:\Users\vinicius.omena\Desktop\viniBot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/22-13:35:10.455 2ffc Recovering log #6140
+2024/07/22-13:35:10.523 2ffc Reusing old log C:\Users\vinicius.omena\Desktop\viniBot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/006140.log 
+2024/07/22-13:35:12.464 2d48 Manual compaction at level-0 from '\x00\xc8\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\xc9\x00\x00\x00' @ 0 : 0; will stop at (end)
