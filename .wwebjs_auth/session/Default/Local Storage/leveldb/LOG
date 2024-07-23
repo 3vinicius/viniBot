@@ -1,3 +1,6 @@
-2024/07/22-13:35:50.703 3d1c Reusing MANIFEST C:\Users\vinicius.omena\Desktop\viniBot\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
-2024/07/22-13:35:50.705 3d1c Recovering log #51
-2024/07/22-13:35:50.706 3d1c Reusing old log C:\Users\vinicius.omena\Desktop\viniBot\.wwebjs_auth\session\Default\Local Storage\leveldb/000051.log 
+2024/07/22-19:23:09.008 3768 Reusing MANIFEST C:\Users\vinicius\IdeaProjects\viniBot\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2024/07/22-19:23:09.016 3768 Recovering log #51
+2024/07/22-19:23:09.017 3768 Reusing old log C:\Users\vinicius\IdeaProjects\viniBot\.wwebjs_auth\session\Default\Local Storage\leveldb/000051.log 
+2024/07/22-19:24:12.299 3768 Level-0 table #55: started
+2024/07/22-19:24:12.305 3768 Level-0 table #55: 12096 bytes OK
+2024/07/22-19:24:12.306 3768 Delete type=0 #51

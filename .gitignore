@@ -1,4 +1,9 @@
 /node_modules/
 /.wwebjs_auth/
 /.wwebjs_cache/
-git ad
+/fileUpload/
+/.wwebjs_cache/
+/.wwebjs_auth/
+/.idea/
+/viniBot.iml
+/test.mpeg
