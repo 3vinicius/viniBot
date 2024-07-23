@@ -1,27 +1,22 @@
-const { exec } = require('child_process');
-const util = require('util');
+const {exec} = require('child_process')
 
-const execPromise = util.promisify(exec);
 
-// Variável externa
-let resultado;
-
-async function executar() {
-    try {
-        const { stdout, stderr } = await execPromise("exec C:/Users/vinicius/Downloads/youtube-dl.exe");
-        if (stderr) {
-            console.error(`stderr: ${stderr}`);
-            return;
-        }
-        resultado = stdout;
-        // Aqui, você pode usar a variável 'resultado' conforme necessário
-    } catch (error) {
-        console.error(`Erro: ${error.message}`);
-    }
+function executeShell() {
+    return new Promise( async (resolve, reject) => {
+        const { stdout, stderr } = await exec('ls');
+        stdout.on("data", (data) => {
+            resolve(data.toString())
+        })
+    })
 }
 
-// Chama a função assíncrona
-executar().then(()=>{
-    console.log(resultado)
-});
+
+executeShell().then((resolve) => {
+        if(resolve.includes("test.mpeg")){
+            console.log("test.mpeg")
+        }
+    })
+    .catch((err) => {
+        console.log("Error:" + err);
+    })
 

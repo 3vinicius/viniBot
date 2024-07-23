@@ -13,19 +13,21 @@ class ServiceChat{
         if(!this.verifyIfListChatIsValid()) {
             this.listChats = []
             this.listChats.push(newChat)
-        }
-        let signal = 0;
-        for (let chat of this.listChats) {
-            if (chat.phoneNumber === newChat.phoneNumber) {
-                signal++
-                break;
-            }
-        }
-        if(!(signal > 0 && this.listChats.length > 0)) {
-            this.listChats.push(newChat)
-            return true
-        } else {
             return false
+        } else {
+            let signal = 0;
+            for (let chat of this.listChats) {
+                if (chat.phoneNumber === newChat.phoneNumber) {
+                    signal++
+                    break;
+                }
+            }
+            if (!(signal > 0 && this.listChats.length > 0)) {
+                this.listChats.push(newChat)
+                return false
+            } else {
+                return true
+            }
         }
     }
 
