@@ -1,9 +1,9 @@
 /node_modules/
-/.wwebjs_auth/
 /.wwebjs_cache/
 /fileUpload/
-/.wwebjs_cache/
-/.wwebjs_auth/
+.wwebjs_cache/
+.wwebjs_auth/
 /.idea/
 /viniBot.iml
 /test.mpeg
+/.wwebjs_auth/session/
