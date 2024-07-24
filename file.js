@@ -3,13 +3,13 @@ const {MessageMedia } = require('whatsapp-web.js');
 const fs = require("fs");
 const path = require("path");
 
-public async function dowloadMessageMedia(url, pitch) {
+async function dowloadMessageMedia(url, pitch) {
     return await executeShell(url, pitch)
         .then((resolve) => resolve)
         .catch((err) => err)
 }
 
-private async function executeShell(url, pitch) {
+async function executeShell(url, pitch) {
     try {
         return new Promise( async (resolve, reject) => {
             const { stdout, stderr } = await exec(`sh "./files/script.sh" ${url} ${pitch}`);
@@ -28,7 +28,7 @@ private async function executeShell(url, pitch) {
 
 
 
-private function createMessageMedia(filename) {
+function createMessageMedia(filename) {
     try {
         filePath = `./files/${filename}`
         data = fs.readFileSync(filePath,'base64')
